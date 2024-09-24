@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.github.jeffchen001218.toucheventtest.view.BaseFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="最外层A"
+        tools:context=".page.TestTouchEventOrderActivity">
+
+        <com.github.jeffchen001218.toucheventtest.view.BaseFrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="#F0977D"
+            android:contentDescription="中间B">
+
+            <com.github.jeffchen001218.toucheventtest.view.BaseFrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="#7FD4FF"
+                android:contentDescription="最内层C" />
+
+        </com.github.jeffchen001218.toucheventtest.view.BaseFrameLayout>
+
+    </com.github.jeffchen001218.toucheventtest.view.BaseFrameLayout>
+</layout>
