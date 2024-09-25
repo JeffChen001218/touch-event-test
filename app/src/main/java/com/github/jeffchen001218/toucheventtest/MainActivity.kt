@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.github.jeffchen001218.toucheventtest.databinding.ActivityMainBinding
+import com.github.jeffchen001218.toucheventtest.page.NestedScrollActivity
 import com.github.jeffchen001218.toucheventtest.page.TestTouchEventOrderActivity
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
     fun testTouchEventOrder(view: View) {
         startActivity(Intent(this, TestTouchEventOrderActivity::class.java))
+    }
+
+    fun testNestedScroll(view: View) {
+        startActivity(Intent(this, NestedScrollActivity::class.java))
     }
 
 }

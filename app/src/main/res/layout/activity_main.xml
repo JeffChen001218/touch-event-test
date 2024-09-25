@@ -7,22 +7,31 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
         <com.google.android.flexbox.FlexboxLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:flexWrap="wrap"
+            android:background="#79A9A9"
+            android:paddingHorizontal="12dp"
+            app:alignContent="center"
             app:alignItems="center"
-            app:alignContent="center">
+            app:flexWrap="wrap">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="testTouchEventOrder"
-                android:text="测试点击事件顺序"/>
+                android:text="测试点击事件顺序" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="testNestedScroll"
+                android:text="测试嵌套滑动" />
 
         </com.google.android.flexbox.FlexboxLayout>
 

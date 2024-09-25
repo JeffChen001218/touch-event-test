@@ -7,6 +7,9 @@ import com.github.jeffchen001218.toucheventtest.tool.getMethodName
 fun logd(tag: String, msg: String) = Log.d(tag, msg)
 fun loge(tag: String, msg: String) = Log.e(tag, msg)
 
+fun logd(msg: String) = Log.d("", msg)
+fun loge(msg: String) = Log.e("", msg)
+
 fun View.logTouchCallMethod() {
     val contentDescription = contentDescription ?: "???"
     val className = this::class.java.simpleName

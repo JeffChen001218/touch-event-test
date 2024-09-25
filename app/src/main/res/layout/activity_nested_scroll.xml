@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- 全屏NestedScrollView -->
+    <com.github.jeffchen001218.toucheventtest.view.BaseNestedScrollView
+        android:id="@+id/outerScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="最外层嵌套容器"
+        tools:context=".page.NestedScrollActivity">
+
+        <!-- 嵌套一个可变高的LinearLayout-->
+        <com.github.jeffchen001218.toucheventtest.view.BaseLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="外层容器Child"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#626D6F"
+                android:contentDescription="顶部300dp View" />
+
+            <!-- 内部嵌套一个可滑动的容器（子项比容器更高） -->
+            <com.github.jeffchen001218.toucheventtest.view.BaseNestedScrollView
+                android:id="@+id/innerScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:contentDescription="内层嵌套容器"
+                tools:context=".page.NestedScrollActivity">
+
+                <com.github.jeffchen001218.toucheventtest.view.BaseLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="内层容器Child"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="#9FA661"
+                        android:contentDescription="内部200dp View1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="#5C97C5"
+                        android:contentDescription="内部200dp View2" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="#A48251"
+                        android:contentDescription="内部200dp View3" />
+
+
+                </com.github.jeffchen001218.toucheventtest.view.BaseLinearLayout>
+
+            </com.github.jeffchen001218.toucheventtest.view.BaseNestedScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#626D6F"
+                android:contentDescription="底部300dp View" />
+
+        </com.github.jeffchen001218.toucheventtest.view.BaseLinearLayout>
+
+    </com.github.jeffchen001218.toucheventtest.view.BaseNestedScrollView>
+</layout>
